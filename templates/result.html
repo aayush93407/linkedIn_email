@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracted LinkedIn Data</title>
+    <style>
+        body {
+            background-color:	#202020;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Extracted LinkedIn Profile Details</h1>
+        <p><strong>Name:</strong> {{ profile.name }}</p>
+        <p><strong>LinkedIn URL:</strong> <a href="{{ profile.linkedin_url }}" target="_blank">{{ profile.linkedin_url }}</a></p>
+        <p><strong>About Section:</strong> {{ profile.about }}</p>
+        <p><strong>Skills:</strong> {{ profile.skills }}</p>
+        <br>
+        <a href="/">Upload Another Resume</a>
+    </div>
+</body>
+</html>
